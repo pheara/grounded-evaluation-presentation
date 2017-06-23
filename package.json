@@ -4,5 +4,8 @@
   "main": "",
   "repository": "git@github.com:m0ru/grounded-evaluation-presentation.git",
   "author": "moru <e1028092@student.tuwien.ac.at>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "reveal.js": "^3.5.0"
+  }
 }
