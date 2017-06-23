@@ -32,25 +32,592 @@
 		<!--[if lt IE 9]>
 		<script src="./node_modules/reveal.js/lib/js/html5shiv.js"></script>
 		<![endif]-->
+        <style type="text/css">
+            .reveal section img {
+                border: none; /* overwrite rather thick 4px border */
+                width: 95%;
+            }
+
+        
+        </style>
 	</head>
 
 	<body>
+        <!-- TODO travis deploy script or change all references to cdn-links -->
 
 		<div class="reveal">
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 
-                <section data-markdown>
-                  ## Markdown support
-
-                  Write content using inline or external Markdown.
-                  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-
-                  ![Grounding as part of the first iteration: Theory and observation leading to Grounding (themes, coding, analysis, criteria/theory) and that to design and evaluation](./figures/grounded_eval_coding-only_flow_chart.svg)
 
 
-                </section>
+
+
+
+<section data-markdown>
+
+# Grounded Evaluation
+
+### of Information Visualizations
+
+(presentation by [Kevin Singer](mailto:kevin.singer@student.tuwien.ac.at))
+
+<!-- run via
+    ~/.bin/node-v5.8.0-linux-x64/bin/reveal-md grounded-eval_notes.md -\-theme white
+
+    using: https://github.com/webpro/reveal-md
+
+    ?showNotes=true   to show notes for everyone / be able to print them
+
+    `s` to open speakers view
+-->
+
+<!--
+    TODO
+    1. [x] case studies
+    1. [x] merge "methods" with "gathering/analyzing"
+    1. [ ] shorten (i.e. synthesize and filter) notes further
+      * only use 1-2 case studies? (and inter-space them with rest?)
+      1. [ ] presentation
+        * white (simple), solarized (friendly) or serif (academic, a tad hard to read)
+          * [ ] fix image urls
+          1  [ ] speakers-notes
+            * [ ] highlight for faster scanning
+              * [ ] make sure they don't require scrolling!!!
+              1. [ ] check: max 12 mins
+
+              * [ ] highlight parts of diagrams that are being talked about
+              * [ ] check for use of expert lingo. for all cases: is the term previously defined?
+              * [x] example of coding! maybe find data from their studies (?)
+              * [ ] (start and) end with definition! (i.e. take it apart and elaborate on it over the course of the presentation)
+              * [ ] basic definitions of other qualitative methods: action research, ethnography, conversation analysis, grounded theory, phenomenography, ...
+              * [ ] basic definition of observer bias
+              * [ ] pictures for 4 forms of qualitative data sources (laid out 2x2)
+              * [ ] four criteria in !w GT ? @ validity
+              * [x] reference layers presentation from last session
+              * [ ] "Grounded Evaluation" and my contact-details on every / last slide
+
+
+              Meta: try to be hands-on in style / give examples so people know they can do this / use this in practice
+-->
+
+
+</section>
+
+
+<section>
+<section data-markdown>
+
+## Source
+
+**Isenberg**, P., **Zuk**, T., **Collins**, C., and **Carpendale**, S. 2008. Grounded evaluation of information visualizations. In Proceedings of the 2008 Workshop on Beyond Time and Errors: Novel Evaluation Methods for Information Visualization. **BELIV‘08. ACM**: Florence, Italy, 9.
+
+</section>
+<section data-markdown>
+
+### Additional Source
+
+Graham R. Gibbs, [Lecture Series on Grounded Theory](https://www.youtube.com/playlist?list=PL8CB91CC62C1C2C7E) for Master Students at University of Huddersfield, 2010, on Youtube
+
+</section>
+</section>
+
+
+
+
+
+<section data-markdown>
+
+> “Grounded evaluation is a **process** that attempts to ensure that the **evaluations** of information visualizations are **situated within the context of intended use**.”
+
+Note:
+
+**qualitative** approaches to "ground" (firmly root/base/rigorously inform) **design** and **evaluation** in **data on context** (?)
+
+at **pre-design** stages 
+
+inspired by / **derives** from **grounded theory** approach, but applies concepts (e.g. "groundedness") a bit more widely
+
+more **holistic approach**. observe **interplay between factors** that influence visualizations, their development and their use.
+
+</section>
+
+
+
+
+
+<section data-markdown>
+
+## Goal
+
+**understand** existing practices, analysis environment and cognitive task constraints
+
+⇓
+
+**inform design** and later **evaluation** criteria / methods
+
+Note:
+
+Understand **existing practices**, analysis **environments** and **cognitive task constraints**, e.g. size and complexity of datasets and tasks, personal experience, stress levels, distractions, cognitive processing capabilities, analysis processes in a given work environment as well as any previously existing (non-)technical solutions.
+
+can be used to **inform design and later evaluation criteria / methods**
+
+help **targeting**/solving actually **existing problems**
+
+@ munzner's **nested model** for visualization design and evaluation: threat-avoidance and evaluation of outer layer(s): **domain problem characterization**, **data/operation abstraction design**, **encoding/interaction technique design**
+
+</section>
+
+
+
+
+
+
+
+<section data-markdown>
+
+> “Everything that can be counted does not necessarily count; everything that counts cannot necessarily be counted”
+
+\- sign in A. Einstein's office
+
+Note:
+
+criticism of current (2008) quantitative-only approaches
+
+* evaluation **usually quantitative**, **removed form** actual workplace/-flows and intended users (and only on simplified subproblems) → reduced **transferability**
+  * usually to assess **specific design choices** or compare visualization techniques based on numbers / frequencies
+  * can't **answer all** questions
+* often only **post-implementation**
+
+
+
+</section>
+
+
+
+
+
+
+<section data-markdown>
+
+## Qualitative Methods
+
+* data to describe meaning
+* rich contextual information
+* subjective experiences
+* complimentary to quantitative methods (!)
+
+Note:
+
+* data to describe **meaning** (as opposed to **statistical inferences**)
+* (captures) rich **contextual information**
+* (captures) **subjective experiences**
+* **complimentary** to quantitative methods (provide meaning/context for interpretation of statistics)
+
+<!--
+(other qualitative methods: action research, ethnography, conversation analysis, grounded theory, phenomenography, ...)
+
+examples from CSCW:  TODO skip? 
+
+* e.g. Tang et al [31]: on design activities around tabletop → importance of gestures
+* e.g. Scott et al [26]: tabletop gaming and collaborative design → theory @ how human territoriality manifests on tables
+* e.g. Tang & Carpendale [30]: nurses shift change → don't optimise temporal overlap away (information exchange)
+-->
+
+</section>
+
+
+
+
+
+<section>
+<section data-markdown>
+
+## Gathering
+
+#### Qualitative Data
+
+</section>
+<section data-markdown>
+
+### Forms of Data
+
+* observations
+* interviews
+* documents / written artifacts
+* audio-visual materials
+
+Note:
+
+usual forms:
+
+* observations (and field studies) (e.g. follow through work-day, think-aloud)
+* interviews (ideally in situ / contextual)
+* documents / written artifacts (collected) (e.g. drawings, forms,...)
+* audio-visual materials (e.g. videotaping, pre-existing recordings)
+
+**all is data**
+
+</section>
+<section data-markdown>
+
+### Concerns
+
+* sampling method
+* projecting onto data
+
+Note:
+
+concerns / challenges:
+
+* **sampling** method that is **representative** and **unbiased**
+* **projecting** onto data what is not there (e.g. **observer/expectancy bias** "want to confirm hypothesis")
+
+</section>
+<section data-markdown>
+
+### Sample Size
+
+* usually lower
+* iterative collection
+* theoretical saturation 
+* depends on problem scope and investigator
+
+Note:
+
+* usually **lower** sample size (less concerned about **statistical** significance )
+* (not fixed) → **iterative** collection 
+* when one **can't gain** new data through observation (**"theoretical saturation"**) (~20-50)
+* depends on **scope** of research problem and **experience** of investigator
+
+can be very **time-consuming!** → trade-offs
+
+</section>
+<section data-markdown>
+
+#### Case Study
+
+### Medical Decision Making
+
+* field observation (incl “thinking aloud”)
+* contextual interviews
+* questionnaire
+
+Note:
+
+participants: physicians
+
+**medical diagnosis**
+
+understand **current practices** and **existing**, customized computer **support**
+
+**data collection:** **field-observation** (**"think aloud"**), **contextual-interviews** of physicians. also, a **questionnaire**.
+
+**data analysis:** thematic analysis / coding
+
+**results:** participants **motives, misgivings, opinions**, thoughts on existing support (**too late** in task flow + **visualization unused**). → "design based around visual evidence as knowledge source(?), rather than diagnostic expert system ... only relevant at **one particular** part of the task" (**less wizardy?**). **multiple** visualizations **spanning larger context**. further investigation @ **uncertainty in reasoning** and visualizations.
+
+</section>
+</section>
+
+
+
+
+
+
+<section>
+<section data-markdown>
+
+## Analyzing
+
+#### Qualitative Data
+
+Note:
+
+can be qualitative and/or quantitative
+
+</section>
+<section data-markdown>
+
+### Thematic Analysis / Coding
+
+![Grounding as part of the first iteration: Theory and observation leading to Grounding (themes, coding, analysis, criteria/theory) and that to design and evaluation](./figures/grounded_eval_coding-only_flow_chart.svg)
+
+Note:
+
+
+usually thematic analysis / coding. quantitative analysis of codes possible.
+
+transcripts?
+
+@graphic thematic analysis: review of data → themes → coding
+
+@graphic: previous evals can also influence coding categories
+
+coding: **subdividing** and **labeling** raw data → **reintegrating** → **theory**
+
+"in vivo" - **informant's terms**
+
+coding-approaches (with increasing bias): **purely data-driven** (**open** coding (~open minded), **inductive**), **previous research**, **theory** driven (~heuristic eval)
+
+**goal:** extract themes and present **coherent, consistent picture** of situation under study
+
+</section>
+<section data-markdown>
+> “Pain relief is a major problem when you have arthritis. Sometimes the pain is worse than other times, but when it gets really bad, whew! It hurts so bad you don't want to get out of bed. You don't feel like doing anything. Any relief you get from drugs that you take is only temporary or partial.”
+
+From study with arthritis sufferers (Strauss & Corbin 1990, Basics of Qualitative Research)
+
+Note:
+
+[Read quote]
+</section>
+<section data-markdown>
+  * pain experience, varying intensity, activity limitation, bed bound
+  * pain relief, self administration, duration, degree
+
+  Note:
+
+  coded with
+
+  * pain experience, varying intensity, activity limitation, bed bound
+  * pain relief, self administration, duration, degree
+
+  more examples and approaches @ generating codes → lecture series:
+
+  (Graham R. Gibbs, Lecture Series on Grounded Theory for Master Students at University of Huddersfield, 2010, <https://www.youtube.com/playlist?list=PL8CB91CC62C1C2C7E>)
+
+</section>
+
+
+<section data-markdown>
+
+### **Analysis**
+
+compare / connect codes
+
+Note:
+
+GT: "Axial Coding"
+
+later stage "analysis":
+
+* model:
+  * causal conditionQuestions?
+
+
+</section>
+</section>
+
+
+<section>
+<section data-markdown>
+
+#### Grounded Evaluation in the
+
+## Development Cycle
+
+</section>
+<section data-markdown>
+
+### Development Cycle
+
+![(Information Visualization) Development Life Cycle: Evaluate–Design–Implement–&hellip;](./figures/development_life_cycle.svg)
+
+
+Note:
+
+
+start **before first** design-phase (i.e. @ **(A)**) to understand pre-design context →
+
+</section>
+<section data-markdown>
+
+### Grounding @ First Cycle
+
+![Grounding as part of the first iteration: Theory and observation leading to Grounding (themes, coding, analysis, criteria/theory) and that to design and evaluation](./figures/grounded_eval_flow_chart.svg)
+
+Note:
+
+[EXPLAIN DIAGRAM]
+
+
+* **rigor** via well **documented/understood** (steps to) design **decisions**
+* user and functional **requirements**
+* eval less constrained by hard-coded workflows in developed software (e.g. paper-based workflows)
+
+
+**design phase**: more **cost-effective** than quantitative. **cover more territory** (early) → good to **broaden and explore search/design space**. **avoid committing** to sub-optimal designs.
+
+**evaluation**: **informed** by early grounding. especially for **discount methods** (heuristic eval, expert reviews, pluralistic/cognitive walk-throughs, focus groups).
+
+late in devel: qualitative acceptance testing and update of knw/info about workflows and typical tasks → inform maintenance/refactoring. quantitative methods (e.g. lab experiments/usab tests) also appropriate at this point.
+
+@graphic: previous evals can also influence coding categories
+
+(user-centered and participatory design)
+
+</section>
+</section>
+
+
+
+<!--
+
+
+## validity
+
+TODO skip?
+
+* not statistical
+* systematical
+* acknowledges researcher's views, research context and interpretations as part of method as long as grounded in data
+* detailed outcome
+
+Glaser & Strauss 1967, Glaser 1978, Glaser 1998 TODO skip?
+
+* fit (concepts ↔ incidents)
+* relevance (captures attention, not only academic)
+* workability {TODO}
+* modifiability (when new data is compared to previous)
+-->
+
+
+
+
+
+
+<section>
+<section data-markdown>
+
+#### Case Study
+
+## Computational Linguistics
+
+Note:
+
+comp. linguists developing machine translation systems. hundreds of thousands of sentence pairs, millions of learned translation rules.
+
+</section>
+<section data-markdown>
+
+<span style="color: gray !important; font-size: 30px">
+(Case Study – Computational Linguistics)
+</span>
+
+### Data Collection
+
+
+1. preliminary interviews
+1. contextual interviews (incl. cognitive walk-through)
+1. participatory observation
+
+Note:
+
+1. **preliminary interviews** → mostly coding, data analysis every **~2 weeks** → **not suited** for observational study (!)
+1. thus: **contextual interviews** in their **research environment**
+  * **interview protocol** as **broad** as possible (**beyond expected usage** of visualizations). covered data, tasks, work & collaborative practices, expertise, tools (e.g. white-board sketches),...
+  * **cognitive walk-through** of typical analysis
+1. two days of **participatory observation**
+  * investigator had comp.-linguistic expertise (not necessary though)
+  * got **trained** and had to solve **example problem** with **their tools and techniques**)
+  * kept **journal** (later **verified** with domain experts)
+  * **collected artifacts**
+
+</section>
+<section data-markdown>
+
+<span style="color: gray !important; font-size: 30px">
+(Case Study – Computational Linguistics)
+</span>
+
+### Data Analysis
+
+**open coding** of:
+
+* artifacts
+* transcripts
+* field notes
+* observation journal
+
+Note:
+
+iterative with data collection
+
+open coding of artifacts, transcripts, field notes, observation journal
+
+</section>
+<section data-markdown>
+
+<span style="color: gray !important; font-size: 30px">
+(Case Study – Computational Linguistics)
+</span>
+
+### Results
+
+Note:
+
+* many **custom**, sophisticated **visualizations** used by computational linguists
+* support not only for analysis of translation data but **also for distributed algorithms**.
+* support for **intermediate states of translation**.
+* if **only assumptions**/domain expert **requests**: visualizations for **single user on domain data**.
+
+
+</section>
+</section>
+
+
+
+<section data-markdown>
+
+## Questions?
+
+</section>
+
+
+
+
+
+
+
+<section data-markdown>
+
+<span style="color: gray !important; font-size: 30px">
+   [BONUS] Case Study
+</span>
+
+## Co-Located Collaboration
+
+###  Info Visualizations
+
+Note:
+
+BONUS
+
+draws from CSCW research
+
+**observational study** (collection) + **GT** (analysis)
+
+participants go **paper-based (!) visualizations** to solve **tasks**. allowed free arrangement of data.
+
+result: **eight** processes / **ways** to complete tasks. related to other models (e.g. **"sense making model"** ("Using Vision to Think" - Card, Mackinlay, Shneiderman, 1999)) → applicable to design and heuristic evaluation
+
+no insight on **low-level interactions** (select, encode, presentation parameters like zoom) at this stage.
+
+attending **weekly experiment-result meetings** of biologists at University of Calgary to learn about their specific collaborative data analysis practices
+
+</section>
+
+
+
+
+
+
+
+
+
+
 
                 <!--
 				<section>
